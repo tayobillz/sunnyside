@@ -1,0 +1,9 @@
+.services { display: grid; grid-template-columns: 1fr; }
+.services__card { text-align: center; display: flex; flex-direction: column; }
+.services__card--mint { background: var(--mint); }
+.services__card--blue { background: var(--sky); }
+.services__card img { width: 100%; height: 18rem; object-fit: cover; }
+.services__body { padding: 2rem 2rem 3rem; max-width: 38ch; margin: 0 auto; }
+.services__body h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+.services__body p { color: var(--navy); opacity: .7; font-size: .95rem; }
+@media (min-width: 768px) { .services { grid-template-columns: 1fr 1fr; } .services__card img { height: 22rem; } }

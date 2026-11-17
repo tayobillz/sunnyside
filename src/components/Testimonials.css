@@ -1,0 +1,10 @@
+.testimonials { padding: var(--space-l) 1.5rem; max-width: 1200px; margin: 0 auto; }
+.testimonials__heading { text-align: center; text-transform: uppercase; letter-spacing: .3em; font-size: 1rem; color: var(--grey); margin-bottom: 3rem; }
+.testimonials__grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+.testimonials__item { margin: 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.testimonials__item img { width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover; }
+.testimonials__item blockquote { margin: 0; font-size: .95rem; max-width: 34ch; }
+.testimonials__item figcaption { display: flex; flex-direction: column; }
+.testimonials__item strong { font-family: var(--font-head); color: var(--navy); font-size: 1.05rem; }
+.testimonials__item span { font-size: .8rem; opacity: .7; }
+@media (min-width: 768px) { .testimonials__grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }

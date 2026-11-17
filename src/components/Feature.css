@@ -1,0 +1,17 @@
+.feature { display: grid; grid-template-columns: 1fr; }
+.feature--yellow { --hl: 255, 214, 0; background: var(--yellow); }
+.feature--coral { --hl: 255, 111, 97; background: var(--coral); }
+.feature__img { order: 0; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.feature__text { order: 1; background: var(--bg); text-align: center; padding: 3rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+.feature__text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+.feature__text p { max-width: 42ch; }
+.feature__link { font-family: var(--font-head); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; color: var(--navy); padding: 0 .4rem; background: linear-gradient(rgba(var(--hl), .5), rgba(var(--hl), .5)) 0 100% / 100% 8px no-repeat; transition: background-size .25s, background-color .25s; }
+.feature__link:hover { background-size: 100% 100%; }
+@media (min-width: 768px) {
+  .feature { grid-template-columns: 1fr 1fr; min-height: 22rem; }
+  .feature__img { height: 100%; aspect-ratio: auto; }
+  .feature__text { order: 0; align-items: flex-start; text-align: left; justify-content: center; padding: 3rem clamp(2rem, 7vw, 6rem); }
+  .feature__img { order: 1; }
+  .feature--reverse .feature__img { order: 0; }
+  .feature--reverse .feature__text { order: 1; }
+}

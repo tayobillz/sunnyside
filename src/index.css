@@ -1,0 +1,16 @@
+:root {
+  --sky: #4DC1FF; --yellow: #FFD600; --coral: #FF6F61; --mint: #8FD5C4;
+  --navy: #1E2A4A; --grey: #7A809B; --bg: #FFFAF6; --green: #2F7D6B;
+  --font-head: 'Fraunces', Georgia, serif; --font-body: 'Barlow', system-ui, sans-serif;
+  --space-s: 1rem; --space-m: 2rem; --space-l: clamp(3rem, 8vw, 6rem);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); font-weight: 500; font-size: 1rem; line-height: 1.7; color: var(--grey); background: var(--bg); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-head); font-weight: 700; color: var(--navy); line-height: 1.2; }
+:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; border-radius: 4px; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
